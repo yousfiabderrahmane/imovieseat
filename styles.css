@@ -1,6 +1,7 @@
 * {
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
+  margin: 0;
 }
 body {
   background: radial-gradient(
@@ -178,9 +179,12 @@ p.text span {
     align-items: center;
     max-width: 400px;
     text-align: center;
-    gap: 10px;
+    gap: 0px;
     margin: 0;
     margin-bottom: 80px;
+  }
+  p .text {
+    margin: 0px;
   }
   .seat:nth-of-type(2),
   .seat:nth-of-type(6) {
