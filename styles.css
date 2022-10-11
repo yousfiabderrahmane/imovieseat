@@ -1,6 +1,7 @@
 * {
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
+  margin: 0;
 }
 body {
   background: radial-gradient(
@@ -99,7 +100,14 @@ select:focus {
   align-items: center;
   gap: 5px;
 }
-
+.seats-container {
+  perspective: 1000px;
+  margin-bottom: 30px;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .seat {
   background-color: #444451;
   height: 12px;
@@ -178,9 +186,12 @@ p.text span {
     align-items: center;
     max-width: 400px;
     text-align: center;
-    gap: 10px;
+    gap: 0px;
     margin: 0;
     margin-bottom: 80px;
+  }
+  p .text {
+    margin: 0px;
   }
   .seat:nth-of-type(2),
   .seat:nth-of-type(6) {
@@ -189,7 +200,7 @@ p.text span {
   .seats-container {
     perspective: 1000px;
     margin-bottom: 30px;
-    width: 100%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
