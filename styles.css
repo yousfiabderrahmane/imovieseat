@@ -50,7 +50,7 @@ select:focus {
   color: #6feaf6;
   border-right: 4px solid #6feaf6;
   overflow: hidden;
-  animation: animate 3s ease-in-out forwards;
+  animation: animate 5s ease-in-out infinite;
 }
 @keyframes animate {
   0% {
@@ -64,21 +64,25 @@ select:focus {
   }
   80% {
     width: 100%;
+    border-right: 4px solid transparent;
   }
   100% {
-    width: 100%;
-    border-right: 4px solid transparent;
+    width: 0%;
+    border-right: 4px solid #6feaf6;
   }
 }
 .movie-container {
   margin: 20px 0;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-; */
 }
 .movie-container select {
   background-color: #fff;
   border: 0;
   border-radius: 5px;
   font-size: 14px;
-  margin-left: 10px;
+  margin-left: 4px;
   padding: 5px 15px 5px 15px;
   -moz-appearance: none;
   appearance: none;
@@ -233,5 +237,6 @@ p.text span {
   }
   #movie {
     color: black;
+    width: 60%;
   }
 }
