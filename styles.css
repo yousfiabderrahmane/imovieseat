@@ -3,7 +3,13 @@
   box-sizing: border-box;
 }
 body {
-  background-color: #242333;
+  background: radial-gradient(
+    circle at -8.9% 51.2%,
+    cyan 0%,
+
+    rgb(19, 30, 37) 24.5%,
+    rgb(19, 30, 37) 66%
+  );
   display: flex;
   height: 100vh;
   overflow: hidden;
@@ -94,7 +100,25 @@ select:focus {
   width: 100%;
   margin: 15px 0;
   transform: rotateX(-45deg);
-  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+  /* box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7); */
+  animation: shadow 2s linear infinite forwards;
+}
+@keyframes shadow {
+  0% {
+    box-shadow: 0 opx 2px rgba(255, 255, 255, 0.7);
+  }
+  25% {
+    box-shadow: 0 0px 5px rgba(255, 255, 255, 0.7);
+  }
+  50% {
+    box-shadow: 0 0px 10px rgba(255, 255, 255, 0.7);
+  }
+  75% {
+    box-shadow: 0 0px 5px rgba(255, 255, 255, 0.7);
+  }
+  100% {
+    box-shadow: 0 0px 2px rgba(255, 255, 255, 0.7);
+  }
 }
 .seats-container {
   perspective: 1000px;
@@ -102,4 +126,31 @@ select:focus {
 }
 p.text span {
   color: #6feaf6;
+}
+@media (max-width: 600px) {
+  .container {
+    display: flex;
+    margin: 0 auto;
+    padding: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+    text-align: center;
+    gap: 10px;
+    margin: 0;
+  }
+  body {
+    background: radial-gradient(
+      circle at 80.9% -11.2%,
+      cyan 0%,
+
+      rgb(19, 30, 37) 24.5%,
+      rgb(19, 30, 37) 66%
+    );
+  }
+  .seat:not(.occupied):hover {
+    cursor: default;
+    transform: scale(1);
+  }
 }
