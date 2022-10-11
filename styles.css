@@ -140,6 +140,7 @@ p.text span {
     text-align: center;
     gap: 10px;
     margin: 0;
+    margin-bottom: 40px;
   }
   body {
     background: radial-gradient(
@@ -155,8 +156,8 @@ p.text span {
     transform: scale(1);
   }
   .seat {
-    height: 17px;
-    width: 19px;
+    height: 22px;
+    width: 25px;
   }
   #movie {
     color: black;
