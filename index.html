@@ -11,6 +11,10 @@
       rel="stylesheet"
     />
     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+    <link
       rel="icon"
       href="https://cdn-icons-png.flaticon.com/512/43/43410.png"
     />
@@ -22,12 +26,14 @@
       <h1 data-text="Megarama">Megarama</h1>
       <div class="movie-container">
         <label>Pick a movie :</label>
-        <select id="movie">
-          <option value="10">Avengers: Endgame ($10)</option>
-          <option value="12">Joker ($12)</option>
-          <option value="8">Toy Story 4 ($8)</option>
-          <option value="9">The Lion King ($9)</option>
-        </select>
+        <div class="i-movie-container">
+          <select id="movie">
+            <option value="10">Avengers: Endgame ($10)</option>
+            <option value="12">Joker ($12)</option>
+            <option value="8">Toy Story 4 ($8)</option>
+            <option value="9">The Lion King ($9)</option>
+          </select>
+        </div>
       </div>
 
       <ul class="showcase">
@@ -47,66 +53,67 @@
 
       <div class="seats-container">
         <div id="screen" class="screen"></div>
-
-        <div class="row">
-          <div class="seat"></div>
-          <div class="seat"></div>
-          <div class="seat"></div>
-          <div class="seat"></div>
-          <div class="seat"></div>
-          <div class="seat"></div>
-          <div class="seat"></div>
-          <div class="seat"></div>
-        </div>
-        <div class="row">
-          <div class="seat"></div>
-          <div class="seat"></div>
-          <div class="seat"></div>
-          <div class="seat occupied"></div>
-          <div class="seat occupied"></div>
-          <div class="seat"></div>
-          <div class="seat"></div>
-          <div class="seat"></div>
-        </div>
-        <div class="row">
-          <div class="seat"></div>
-          <div class="seat"></div>
-          <div class="seat"></div>
-          <div class="seat"></div>
-          <div class="seat"></div>
-          <div class="seat"></div>
-          <div class="seat occupied"></div>
-          <div class="seat occupied"></div>
-        </div>
-        <div class="row">
-          <div class="seat"></div>
-          <div class="seat"></div>
-          <div class="seat"></div>
-          <div class="seat"></div>
-          <div class="seat"></div>
-          <div class="seat"></div>
-          <div class="seat"></div>
-          <div class="seat"></div>
-        </div>
-        <div class="row">
-          <div class="seat"></div>
-          <div class="seat"></div>
-          <div class="seat"></div>
-          <div class="seat occupied"></div>
-          <div class="seat occupied"></div>
-          <div class="seat"></div>
-          <div class="seat"></div>
-          <div class="seat"></div>
-        </div>
-        <div class="row">
-          <div class="seat"></div>
-          <div class="seat"></div>
-          <div class="seat"></div>
-          <div class="seat"></div>
-          <div class="seat occupied"></div>
-          <div class="seat occupied"></div>
-          <div class="seat occupied"></div>
-          <div class="seat"></div>
+        <div class="rows-container">
+          <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+          </div>
+          <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
+            <div class="seat occupied"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+          </div>
+          <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
+            <div class="seat occupied"></div>
+          </div>
+          <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+          </div>
+          <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
+            <div class="seat occupied"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+          </div>
+          <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
+            <div class="seat occupied"></div>
+            <div class="seat occupied"></div>
+            <div class="seat"></div>
+          </div>
         </div>
       </div>
 
@@ -117,7 +124,10 @@
         >
       </p>
     </div>
-
+    <script
+      src="https://kit.fontawesome.com/b92ec7cc9e.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="main.js"></script>
   </body>
 </html>

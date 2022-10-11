@@ -63,6 +63,7 @@ container.addEventListener("click", (e) => {
 // movie select event
 movieSelect.addEventListener("change", (e) => {
   ticketPrice = +e.target.value;
+
   setMovieData(e.target.selectedIndex, e.target.value);
   updateSelectedCount();
 });
@@ -74,3 +75,10 @@ const screen = document.getElementById("screen");
 setTimeout(() => {
   screen.classList.add("show");
 }, 100);
+// change icon
+
+const icon = document.getElementById("icon");
+icon.addEventListener("click", () => {
+  icon.classList.toggle("fa-angle-down");
+  icon.classList.toggle("fa-angle-up");
+});
