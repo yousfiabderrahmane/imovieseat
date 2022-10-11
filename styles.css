@@ -154,7 +154,7 @@ i {
 }
 .seat:not(.occupied):hover {
   cursor: pointer;
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 .showcase .seat {
   height: 20px;
@@ -186,20 +186,20 @@ i {
   opacity: 0;
   transition: all 1.5s;
   box-shadow: 0 0px 4px rgba(255, 255, 255, 1);
-  animation: shadow 1.5s linear infinite forwards;
+  animation: shadow 2s linear infinite forwards;
 }
 @keyframes shadow {
   0% {
     box-shadow: 0 0px 4px rgba(255, 255, 255, 1);
   }
   25% {
-    box-shadow: 0 0px 2px rgba(255, 255, 255, 1);
+    box-shadow: 0 0px 25px rgba(255, 255, 255, 1);
   }
   50% {
-    box-shadow: 0 0px 10px rgba(255, 255, 255, 1);
+    box-shadow: 0 0px 50px rgba(255, 255, 255, 1);
   }
   75% {
-    box-shadow: 0 0px 8px rgba(255, 255, 255, 1);
+    box-shadow: 0 0px 15px rgba(255, 255, 255, 1);
   }
   100% {
     box-shadow: 0 0px 4px rgba(255, 255, 255, 1);
