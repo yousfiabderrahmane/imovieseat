@@ -68,3 +68,9 @@ movieSelect.addEventListener("change", (e) => {
 });
 //initial count and total
 updateSelectedCount();
+
+// show fade on load
+const screen = document.getElementById("screen");
+setTimeout(() => {
+  screen.classList.add("show");
+}, 100);

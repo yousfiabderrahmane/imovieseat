@@ -34,6 +34,40 @@ select:focus {
   gap: 20px;
   margin: 0;
 }
+.container h1 {
+  color: transparent;
+  position: relative;
+}
+.container h1::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  color: #6feaf6;
+  border-right: 4px solid #6feaf6;
+  overflow: hidden;
+  animation: animate 3s ease-in-out forwards;
+}
+@keyframes animate {
+  0% {
+    width: 0;
+  }
+  40% {
+    width: 60%;
+  }
+  50% {
+    width: 50%;
+  }
+  80% {
+    width: 100%;
+  }
+  100% {
+    width: 100%;
+    border-right: 4px solid transparent;
+  }
+}
 .movie-container {
   margin: 20px 0;
 }
@@ -55,13 +89,17 @@ select:focus {
   color: #777;
   list-style: none;
   display: flex;
-  width: 100%;
+
+  font-size: 10px;
+  width: 70%;
   justify-content: space-between;
 }
 .showcase li {
   display: flex;
+  align-items: center;
   gap: 5px;
 }
+
 .seat {
   background-color: #444451;
   height: 12px;
@@ -101,6 +139,8 @@ select:focus {
   width: 100%;
   margin: 15px 0;
   transform: rotateX(-45deg);
+  opacity: 0;
+  transition: all 1.5s;
   /* box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7); */
   animation: shadow 2s linear infinite forwards;
 }
@@ -121,12 +161,12 @@ select:focus {
     box-shadow: 0 0px 2px rgba(255, 255, 255, 0.7);
   }
 }
-.seats-container {
-  perspective: 1000px;
-  margin-bottom: 30px;
-}
+
 p.text span {
   color: #6feaf6;
+}
+.show {
+  opacity: 1;
 }
 @media (max-width: 600px) {
   .container {
@@ -140,7 +180,22 @@ p.text span {
     text-align: center;
     gap: 10px;
     margin: 0;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
+  }
+  .seat:nth-of-type(2),
+  .seat:nth-of-type(6) {
+    margin-right: 38px;
+  }
+  .seats-container {
+    perspective: 1000px;
+    margin-bottom: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .scren {
+    height: 80px;
   }
   body {
     background: radial-gradient(
@@ -155,9 +210,13 @@ p.text span {
     cursor: default;
     transform: scale(1);
   }
+  .showcase li .seat {
+    height: 12px;
+    width: 15px;
+  }
   .seat {
-    height: 22px;
-    width: 25px;
+    height: 29px;
+    width: 32px;
   }
   #movie {
     color: black;
