@@ -153,4 +153,8 @@ p.text span {
     cursor: default;
     transform: scale(1);
   }
+  .seat {
+    height: 17px;
+    width: 19px;
+  }
 }
