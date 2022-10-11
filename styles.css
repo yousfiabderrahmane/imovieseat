@@ -21,6 +21,7 @@ body {
 select:focus {
   outline: none;
 }
+
 .container {
   display: flex;
   margin: 0 auto;
@@ -156,5 +157,11 @@ p.text span {
   .seat {
     height: 17px;
     width: 19px;
+  }
+  #movie {
+    color: black;
+  }
+  select option {
+    color: #6feaf6;
   }
 }
